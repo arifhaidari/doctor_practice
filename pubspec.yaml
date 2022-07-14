@@ -1,0 +1,96 @@
+name: doctor_panel
+description: A new Flutter project.
+
+# The following line prevents the package from being accidentally published to
+# pub.dev using `pub publish`. This is preferred for private packages.
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+version: 1.0.0+1
+
+environment:
+  sdk: '>=2.12.0 <3.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  material_design_icons_flutter: ^5.0.5955-rc.1
+  web_socket_channel: ^2.1.0
+  qr_code_scanner: ^0.5.2
+  file_picker: ^4.1.1
+  audioplayers: ^0.20.1
+  dotted_line: ^3.0.0
+  cached_network_image: ^3.0.0-nullsafety
+  auto_size_text: ^3.0.0-nullsafety.0
+  flutter_staggered_grid_view: ^0.4.0-nullsafety.3
+  intl: ^0.17.0
+  fluttertoast: ^8.0.3
+  awesome_dialog: ^2.0.0-nullsafety.1
+  stacked_card_carousel: ^0.0.3-nullsafety.1
+  photo_view: ^0.11.1
+  flutter_pdfview: ^1.1.0
+  pdf: ^3.2.0
+  path: ^1.8.0
+  http: ^0.13.1
+  path_provider: ^2.0.1
+  printing: ^5.1.0
+  flutter_switch: ^0.3.1
+  modal_bottom_sheet: ^2.0.0
+  flutter_typeahead: ^3.1.1
+  qr_flutter: ^4.0.0
+  flutter_rating_bar: ^4.0.0
+  google_maps_flutter: ^2.0.3
+  dio: ^4.0.0
+  geolocator: ^7.0.3
+  month_picker_dialog: ^0.4.0
+  percent_indicator: ^3.0.1
+  image_picker: ^0.7.5
+  shared_preferences: ^2.0.6
+  pin_code_fields: ^7.2.0
+  datetime_picker_formfield: ^2.0.0
+  flutter_sound: ^8.1.4
+  permission_handler: ^8.0.0+2
+
+  # The following adds the Cupertino Icons font to your application.
+  # Use with the CupertinoIcons class for iOS style icons.
+  cupertino_icons: ^1.0.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+# For information on the generic Dart part of this file, see the
+# following page: https://dart.dev/tools/pub/pubspec
+
+# The following section is specific to Flutter.
+flutter:
+
+  # The following line ensures that the Material Icons font is
+  # included with your application, so that you can use the icons in
+  # the material Icons class.
+  uses-material-design: true
+
+  # To add assets to your application, add an assets section, like this:
+  assets:
+    - assets/icons/map_marker_black.png
+    - assets/icons/doctor_female.png
+    - assets/icons/doctor_male.png
+    - assets/icons/female_icon.png
+    - assets/icons/male_icon.png
+    - assets/icons/login_background.png
+    - assets/icons/patient_list_background2.jpeg
+    - assets/otp.gif
+    - assets/verify.png
+    
+  # fonts:
+  #   - family: Roboto
+  #     fonts:
+  #       - asset: assets/fonts/Roboto-Regular.ttf
+  #         weight: 400
+  #       - asset: assets/fonts/Roboto-Black.ttf
+  #         weight: 900
+  #       - asset: assets/fonts/Roboto-BlackItalic.ttf
+  #         weight: 900
+  #         style: italic
+  #
+  # For details regarding fonts from package dependencies,
+  # see https://flutter.dev/custom-fonts/#from-packages
