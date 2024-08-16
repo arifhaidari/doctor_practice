@@ -1,6 +1,4 @@
-# Doctor Practice - Mobile App
-
-![Doctor Practice Logo](path/to/logo.png)
+# Doctor Practice - Mobile App (Flutter)
 
 ## Overview
 
