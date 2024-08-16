@@ -45,15 +45,9 @@ class _ApptSummaryState extends State<ApptSummary> {
       try {
         setState(() {
           _apptModel = ApptModel.fromJson(_apptResponse.data);
-          print('value fo the new fieldls ');
-          print(_apptModel.feedback);
-          print(_apptModel.review);
-          print(_apptModel.review.runtimeType);
           _isLoading = false;
         });
       } catch (e) {
-        print('value fo errorrroorr');
-        print(e);
         setState(() {
           _isLoading = false;
           _isUnknownError = true;

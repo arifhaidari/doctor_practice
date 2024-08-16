@@ -125,15 +125,8 @@ class HttpService {
           },
         ),
       );
-      print(response.data);
-      print(response.statusCode);
-      print('vlaue fo response__________==========');
-      print(response);
       return _serverResponse(response);
     } on DioError catch (e) {
-      print('this conditon is true on DioError catch (e)');
-      print(e);
-      print(e.message);
       // bool checkConnection = await _isConnected();
       // if (!checkConnection) {
       //   return APIResponse(error: true, errorMessage: NO_INTERNET_CONNECTION);
@@ -162,13 +155,8 @@ class HttpService {
           },
         ),
       );
-      print(response.statusCode);
-      print(response);
       return APIResponse();
     } on DioError catch (e) {
-      print('this conditon is true on DioError catch (e)');
-      print(e);
-      print(e.message);
       // bool checkConnection = await _isConnected();
       // if (!checkConnection) {
       //   return APIResponse(error: true, errorMessage: NO_INTERNET_CONNECTION);
@@ -206,15 +194,13 @@ class HttpService {
     print('inside the _serverResponse');
     // 405 not allowed
     // 404 not found
-    print("Success ${response.statusCode! >= 200 && response.statusCode! <= 204}");
+    // print("Success ${response.statusCode! >= 200 && response.statusCode! <= 204}");
     if (response.statusCode! >= 200 && response.statusCode! <= 204) {
       return APIResponse(data: response.data);
     } else if (response.statusCode! >= 400 &&
         response.statusCode! < 500 &&
         response.statusCode! != 404 &&
         response.statusCode! != 405) {
-      print('value of repsone in error dheker ');
-      print(response);
       return _checkMapError(response.data);
     } else if (response.statusCode == 404) {
       return APIResponse(error: true, errorMessage: 'Contact for support');
@@ -234,21 +220,16 @@ class HttpService {
       if (data['errors'] != null) {
         return APIResponse(data: null, error: true, errorMessage: data['errors']);
       } else {
-        print('inside the esle===----');
         String error = "";
         String tokenExpired = "no_code";
         data.forEach((key, value) {
           if (key == 'code' && value == 'token_not_valid' || value == 'bad_authorization_header') {
-            print('this condtion truel token_not_valid');
             tokenExpired = value.toString();
           }
 
           error = error + (value is List ? value[0].toString() : value.toString()) + "\n";
         });
-        print('value of tokenExpired after conditon');
-        print(tokenExpired);
         if (tokenExpired != 'no_code') {
-          print('condtion true tokenExpired');
           return APIResponse(error: true, errorMessage: tokenExpired);
         }
         return APIResponse(error: true, errorMessage: error);

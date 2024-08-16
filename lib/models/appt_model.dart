@@ -44,6 +44,7 @@ class ApptModel {
   Map<String, dynamic> toJson() {
     return {
       'user_patient': userPatient != null ? userPatient!.toJson() : null,
+      // 'user_patient': userPatient != null ? UserModel!.toJson(userPatient) : null,
       'patient': patient != null ? patient!.toJson() : null,
       'clinic': clinic != null ? clinic!.toJson() : null,
       'day_pattern': dayPattern != null ? dayPattern!.toJson() : null,

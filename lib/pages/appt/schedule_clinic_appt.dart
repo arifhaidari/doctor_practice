@@ -360,8 +360,6 @@ Container timeSlottingDropDown(modalState, mQuery, timeList, defaultVal, flag) {
       dropdownColor: Palette.imageBackground,
       underline: SizedBox.shrink(),
       onChanged: (String? newValue) {
-        print('value of neValeu');
-        print(newValue);
         modalState(() {
           if (flag == 'duration') {
             slotDurationDefault = newValue!;
@@ -382,9 +380,6 @@ Container timeSlottingDropDown(modalState, mQuery, timeList, defaultVal, flag) {
                 flag == 'duration' ? "$value Mins" : value,
                 maxLines: 1,
                 overflow: TextOverflow.ellipsis,
-                // style: TextStyle(
-                //   fontSize: 15,
-                // ),
               ),
             ));
       }).toList(),

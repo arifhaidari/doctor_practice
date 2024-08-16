@@ -82,8 +82,6 @@ class _AppointmentState extends State<Appointment> {
         }
       });
     }
-    print('value of bookedApptList length');
-    print(bookedApptList.length);
   }
 
   @override
